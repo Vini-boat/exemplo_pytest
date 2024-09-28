@@ -7,3 +7,6 @@ class Calculadora():
 
     def subtrair(self,a:int, b:int) -> int:
         return a-b
+    
+    def multiplicar(self,a:int, b:int) ->int:
+        return a*b

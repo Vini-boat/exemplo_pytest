@@ -27,3 +27,16 @@ def test_subtrair_deve_retornarresultadovalida(a,b,expected):
     actual = calc.subtrair(a,b)
     #Assert
     assert actual == expected
+
+@pytest.mark.parametrize("a,b,expected", [
+    (2,3,6),
+    (0,0,0),
+    (-1,-1,1)
+])
+def test_multiplicar_deve_retornarprodutovalido(a,b,expected):
+    #Arrange
+    calc = Calculadora()
+    #Act
+    actual = calc.multiplicar(a,b)
+    #Assert
+    assert actual == expected
