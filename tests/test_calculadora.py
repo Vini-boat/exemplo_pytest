@@ -1,5 +1,5 @@
 import pytest
-from src.calculadora import somar, subtrair
+from src.calculadora import Calculadora
 
 @pytest.mark.parametrize("a,b,expected", [
     (1,2,3),
@@ -8,9 +8,11 @@ from src.calculadora import somar, subtrair
 ])
 def test_somar_deve_retornarsomavalida(a,b,expected):
     #Arrange
+    calc = Calculadora()
     #Act
+    actual = calc.somar(a,b)
     #Assert
-    assert somar(a,b) == expected
+    assert actual == expected
 
 
 @pytest.mark.parametrize("a,b,expected", [
@@ -19,4 +21,9 @@ def test_somar_deve_retornarsomavalida(a,b,expected):
     (-1,-1,0)
 ])
 def test_subtrair_deve_retornarresultadovalida(a,b,expected):
-    assert subtrair(a,b) == expected
+    #Arrange
+    calc = Calculadora()
+    #Act
+    actual = calc.subtrair(a,b)
+    #Assert
+    assert actual == expected

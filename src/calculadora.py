@@ -1,5 +1,9 @@
-def somar(a: int,b: int) -> int:
-    return a+b
+class Calculadora():
+    def __init__(self) -> None:
+        pass
 
-def subtrair(a:int, b:int) -> int:
-    return a-b
+    def somar(self,a: int,b: int) -> int:
+        return a+b
+
+    def subtrair(self,a:int, b:int) -> int:
+        return a-b
