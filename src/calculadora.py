@@ -7,5 +7,3 @@ class Calculadora():
 
     def subtrair(self,a:int, b:int) -> int:
         return a-b
-    
-    #test
